@@ -1,0 +1,319 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="0px"
+    android:paddingLeft="0px"
+    android:paddingRight="0px"
+    android:paddingTop="0px"
+    tools:context="activity.MainActivity" >
+  
+    <RelativeLayout
+        android:layout_width = "match_parent"
+        android:layout_height = "0px"
+        android:layout_weight = "1"
+        android:background = "#FFB8CEFF"
+        >
+        <ImageView
+            android:id = "@+id/mainsettingbtn"
+            android:onClick = "mainOnClick"
+            android:layout_height = "match_parent"
+            android:layout_width = "30dp"
+            android:layout_alignParentRight = "true"
+            android:layout_alignParentEnd = "true"
+            android:layout_marginTop = "8dp"
+            android:layout_marginBottom = "8dp"
+            android:layout_marginRight = "10dp"
+            android:layout_marginEnd = "10dp"
+            android:src = "@drawable/setting"
+            />
+    </RelativeLayout>
+    
+	<!--  center layout area -->
+    <RelativeLayout
+        android:id="@+id/maincenter"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="4"
+        android:background="#FFFFFFFF"
+        android:orientation="horizontal"
+        android:paddingTop = "10dp"
+        android:paddingLeft = "5dp"
+        android:paddingStart = "5dp"
+        android:paddingRight = "5dp"
+        android:paddingEnd = "5dp"
+        android:paddingBottom = "5dp"
+        >
+        
+        <RelativeLayout
+            android:id="@+id/movingstatusbox"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="3dp"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/batterystatusbox"
+            android:layout_toStartOf="@+id/batterystatusbox"
+            android:background="@drawable/outerstatusbox"
+            android:paddingBottom="3dp"
+            android:paddingEnd="0dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="0dp"
+            android:paddingStart="5dp"
+            android:paddingTop="5dp" >
+
+            <TextView
+                android:id="@+id/movingstatustext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:text="Hello"
+                android:textColor="#FF000000"
+                android:textSize="23sp" 
+                />
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/movingstatustext"
+                android:layout_marginEnd="-8dp"
+                android:layout_marginRight="-8dp"
+                android:src="@drawable/walking" />
+        </RelativeLayout>
+        
+        <LinearLayout
+            android:id = "@+id/batterystatusbox"
+            android:layout_width="110dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight = "true"
+            android:layout_alignParentEnd = "true"
+            android:background = "#FFB8CEFF" 
+            android:orientation = "vertical"
+            android:paddingLeft = "4dp"
+            android:paddingStart = "4dp"     
+            android:paddingRight = "4dp"
+            android:paddingEnd = "4dp"
+            android:paddingBottom = "6dp"
+            >
+            <RelativeLayout
+                android:layout_width = "match_parent"
+                android:layout_height = "40dp"
+                android:layout_marginBottom = "3dp"
+                >
+	            <ImageView
+	                android:layout_width="35dp"
+	                android:layout_height="35dp"
+	                android:layout_marginLeft = "4dp"
+	                android:layout_alignParentBottom="true"
+	                android:layout_alignParentLeft="true"
+	                android:layout_alignParentStart="true"
+	                android:src="@drawable/battery" />
+	            <TextView 
+	                android:text = "100%"
+	                android:layout_width = "wrap_content"
+	                android:layout_height = "wrap_content"
+	                android:textSize = "22sp"
+	                android:layout_marginTop = "9dp"
+	                android:layout_marginRight = "4dp"
+	                android:layout_alignParentRight = "true"
+	                android:layout_alignParentEnd = "true"	                
+	                />
+            </RelativeLayout>
+            <LinearLayout 
+                android:layout_width = "match_parent"
+                android:layout_height = "match_parent"
+	            android:background = "#FFFFFFFF"  
+	            android:orientation = "vertical"
+	            android:padding = "5dp"              
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/underline"
+                    android:layout_gravity = "center"
+                    android:paddingLeft = "7dp"
+                    android:paddingRight = "7dp"
+                    android:paddingBottom = "3dp"
+                    android:layout_marginBottom = "7dp"
+                    android:text="Time Left" 
+                    android:textColor = "#FFAAAAAA"
+                    />
+                <TextView
+                    style = "@style/battery_time_text"
+                    android:text = "1 Hrs"
+                    android:layout_marginRight = "20dp"
+                    android:layout_marginBottom = "4dp"
+                    />
+                <TextView 
+                    style = "@style/battery_time_text"
+                    android:text = "30 Mins"
+                    android:layout_marginRight = "8dp"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+        
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width = "match_parent"
+        android:layout_height = "0px"
+        android:layout_weight = "0.8"
+        android:background = "#FFFFFFFF"
+        android:paddingLeft = "5dp"
+        android:paddingRight = "5dp" 
+        android:paddingTop = "0dp"
+        android:paddingBottom = "0dp"       
+        >
+        <TextView
+            android:text = "Device Status"
+            android:textColor = "#FF000000"
+            android:textSize = "20sp"
+            android:layout_width = "match_parent"
+            android:layout_height = "wrap_content"
+            android:background = "@drawable/upperline"
+            android:paddingTop = "8dp"
+            android:paddingLeft = "2dp"
+            />
+    </LinearLayout>
+    
+    <!-- dveice status area -->
+    <LinearLayout
+        android:id="@+id/mainbottom"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="5.2"
+        android:background="#FFE0E0E0"
+        android:orientation="vertical"
+        android:paddingTop = "10dp"
+        >
+        <!--  wifi status -->
+        <LinearLayout
+            style = "@style/device_status_wrap"
+            android:id="@+id/mainwifibtn"
+            >
+            <View 
+                style = "@style/device_status_left"
+                android:id = "@+id/mainwifibar"              
+                />
+            <LinearLayout 
+                style = "@style/device_status_inner_wrap"
+                >
+                <ImageView
+                    style = "@style/device_status_icon"
+                    android:id = "@+id/mainwifiimg"                    
+                    android:src = "@drawable/wifi_off"
+                    />
+                <TextView
+                    style = "@style/device_status_text"
+                    android:id = "@+id/mainwifitext" 
+                    android:text = "Wi-Fi"                                       
+                    />
+            </LinearLayout>
+        </LinearLayout>
+        <!--  bluetooth status -->
+        <LinearLayout 
+            style = "@style/device_status_wrap"
+            android:id="@+id/mainbluetoothbtn"
+            >
+            <View 
+                style = "@style/device_status_left"
+                android:id = "@+id/mainbluetoothbar" 
+                />
+            <LinearLayout 
+                style = "@style/device_status_inner_wrap"
+                android:id = "@+id/device_bluetooth_btn"
+                >
+                <ImageView
+                    style = "@style/device_status_icon" 
+                    android:id = "@+id/mainbluetoothimg" 
+                    android:src = "@drawable/bluetooth_off"
+                    />
+                <TextView
+                    style = "@style/device_status_text"
+                     android:id = "@+id/mainbluetoothtext"
+                    android:text = "Bluetooth"                                       
+                    />
+            </LinearLayout>
+        </LinearLayout>
+        <!--  Data Status -->
+        <LinearLayout 
+            style = "@style/device_status_wrap"
+            android:id="@+id/maindatabtn"
+            >
+            <View 
+                style = "@style/device_status_left"
+                android:id = "@+id/maindatabar" 
+                />
+            <LinearLayout 
+                style = "@style/device_status_inner_wrap"
+                android:id = "@+id/device_data_btn"
+                >
+                <ImageView
+                    style = "@style/device_status_icon" 
+                     android:id = "@+id/maindataimg" 
+                    android:src = "@drawable/data_off"
+                    />
+                <TextView
+                    style = "@style/device_status_text"
+                    android:id = "@+id/maindatatext" 
+                    android:text = "Data Network"                                       
+                    />
+            </LinearLayout>
+        </LinearLayout>
+        <!--  GPS Status -->
+        <LinearLayout 
+            style = "@style/device_status_wrap"
+            android:id="@+id/maingpsbtn"
+            >
+            <View 
+                style = "@style/device_status_left"
+                android:id = "@+id/maingpsbar" 
+                />
+            <LinearLayout 
+                style = "@style/device_status_inner_wrap"
+                android:id = "@+id/device_gps_btn"
+                >
+                <ImageView
+                    style = "@style/device_status_icon" 
+                    android:id = "@+id/maingpsimg" 
+                    android:src = "@drawable/gps_off"
+                    />
+                <TextView
+                    style = "@style/device_status_text"
+                    android:id = "@+id/maingpstext"
+                    android:text = "GPS"                                       
+                    />
+            </LinearLayout>
+        </LinearLayout>
+        <!--  Data Sync Status -->
+        <LinearLayout 
+            style = "@style/device_status_wrap"
+            android:id="@+id/mainsyncbtn"
+            >
+            <View 
+                style = "@style/device_status_left"
+                android:id = "@+id/mainsyncbar" 
+                />
+            <LinearLayout 
+                style = "@style/device_status_inner_wrap"
+                android:id = "@+id/device_sync_btn"
+                >
+                <ImageView
+                    style = "@style/device_status_icon"
+                    android:id = "@+id/mainsyncimg"
+                    android:src = "@drawable/sync_off"
+                    />
+                <TextView
+                    style = "@style/device_status_text"
+                    android:id = "@+id/mainsynctext"
+                    android:text = "Data Sync"                                       
+                    />
+            </LinearLayout>
+        </LinearLayout>                                
+    </LinearLayout>
+</LinearLayout>

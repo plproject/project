@@ -1,0 +1,64 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="0px"
+    android:paddingLeft="0px"
+    android:paddingRight="0px"
+    android:paddingTop="0px"
+    tools:context="activity.MainActivity" >
+    <RelativeLayout
+        android:layout_width = "match_parent"
+        android:layout_height = "0px"
+        android:layout_weight = "1"
+        android:background = "#FFB8CEFF"
+        ></RelativeLayout>
+    <TextView
+        android:layout_width = "match_parent"
+        android:layout_height = "35dp"
+    	android:paddingTop = "7dp"
+    	android:paddingLeft = "7dp"
+        android:text = "장치의 자동조작 여부를 선택할 수 있습니다"
+        android:background = "#FFD9E9FF"
+        android:textColor = "#FF000000"
+        />
+    <LinearLayout 
+        android:layout_width = "match_parent"
+        android:layout_height = "0px"
+        android:layout_weight = "10"
+        android:orientation = "vertical"
+        android:background = "#FFE0E0E0"
+        >
+        <LinearLayout style = "@style/setting_wrap">
+            <View style = "@style/setting_checkbox" />
+            <TextView style = "@style/setting_text" 
+                android:text = "Wi-Fi"  
+                />
+        </LinearLayout>
+        <LinearLayout style = "@style/setting_wrap">
+            <View style = "@style/setting_checkbox" />
+            <TextView style = "@style/setting_text" 
+                android:text = "Bluetooth"  
+                />
+        </LinearLayout>
+        <LinearLayout style = "@style/setting_wrap">
+            <View style = "@style/setting_checkbox" />
+            <TextView style = "@style/setting_text" 
+                android:text = "Data Network"  
+                />
+        </LinearLayout>
+        <LinearLayout style = "@style/setting_wrap">
+            <View style = "@style/setting_checkbox" />
+            <TextView style = "@style/setting_text" 
+                android:text = "GPS"  
+                />
+        </LinearLayout>
+        <LinearLayout style = "@style/setting_wrap">
+            <View style = "@style/setting_checkbox" />
+            <TextView style = "@style/setting_text" 
+                android:text = "Data Sync"  
+                />
+        </LinearLayout>                                              
+    </LinearLayout>
+</LinearLayout>
